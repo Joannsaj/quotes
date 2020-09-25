@@ -10,7 +10,10 @@ export class GoalFormComponent implements OnInit {
   newQuote = new IQuote(0, "", "", new Date());
   @Output() addGoal = new EventEmitter<IQuote>();
 
-
+  submitQuote() {
+    let quoteCopy = Object.assign({}, this.newQuote);
+    this.addGoal.emit(quoteCopy);
+  }
 
   constructor() { }
 
