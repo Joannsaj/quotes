@@ -8,10 +8,14 @@ import { Quote } from 'src/app/quote'
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    { quote: 'Life is short, live it while you can', name: 'Joan' },
-    { quote: 'Life is what you make it', name: 'mee' },
-    { quote: ' Its always the small things', name: 'John' }
+    new Quote('Life is short, live it while you can', 'Joan'),
+    new Quote('Life is what you make it', 'mee'),
+    new Quote(' Its always the small things', 'John')
   ]
+  toggleDetails(index) {
+    this.quotes[index].showDetails = !this.quotes[index].showDetails;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
