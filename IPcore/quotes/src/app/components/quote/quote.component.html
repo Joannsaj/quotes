@@ -1,7 +1,8 @@
 <div class="container">
     <h1>Vote on it</h1>
     <hr>
-
-    <h2 *ngFor='let quote of quotes;let i = index'>
-        {{quote.quote}}</h2>
+    <div *ngFor='let quote of quotes;let i = index'>
+        <h2> {{quote.quote}}</h2>
+        <h4> {{quote.name}}</h4>
+    </div>
 </div>
