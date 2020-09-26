@@ -8,7 +8,9 @@ import { Quote } from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    { quote: 'Life is short, live it while you can', name: 'Joan' }
+    { quote: 'Life is short, live it while you can', name: 'Joan' },
+    { quote: 'Life is what you make it', name: 'Joan' },
+    { quote: ' Its always the small things', name: 'Joan' }
   ]
   constructor() { }
 
