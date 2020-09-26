@@ -3,7 +3,8 @@
     <hr>
     <div *ngFor='let quote of quotes;let i = index'>
         <h2> {{quote.quote}}</h2>
-        <button (click)='toggleDetails(i)'>Details</button>
-        <app-quote-details *ngIf='quote.showDetails' [quote]='quote'></app-quote-details>
+        <button (click)='toggleDetails(i)'>DETAILS</button>
+        <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (isComplete)='deleteQuote($event,i)'>
+        </app-quote-details>
     </div>
 </div>

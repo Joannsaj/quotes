@@ -15,7 +15,15 @@ export class QuoteComponent implements OnInit {
   toggleDetails(index) {
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
+  deleteQuote(isComplete, index) {
+    if (isComplete) {
+      let toDelete = confirm(`Are you sure you want to delete Quote ?`)
 
+      if (toDelete) {
+        this.quotes.splice(index, 1)
+      }
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {
