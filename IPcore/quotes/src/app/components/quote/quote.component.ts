@@ -8,16 +8,18 @@ import { Quote } from 'src/app/quote'
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote('Life is short, live it while you can', 'Joan'),
-    new Quote('Life is what you make it', 'mee'),
-    new Quote(' Its always the small things', 'John')
+    new Quote('Life is short, live it while you can', 'Joan', new Date(2020, 3, 14)),
+    new Quote('Life is what you make it', 'mee', new Date(2020, 3, 14)),
+    new Quote(' Its always the small things', 'John', new Date(2020, 3, 14))
   ]
   toggleDetails(index) {
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
+
   addNewQuote(quote) {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
+    quote.completeDate = new Date(quote.completeDate)
     this.quotes.push(quote)
   }
   deleteQuote(isComplete, index) {
