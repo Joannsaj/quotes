@@ -3,6 +3,6 @@
     <hr>
     <div *ngFor='let quote of quotes;let i = index'>
         <h2> {{quote.quote}}</h2>
-        <h4> {{quote.name}}</h4>
+        <app-quote-details [quote]='quote'></app-quote-details>
     </div>
 </div>
