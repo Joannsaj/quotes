@@ -2,18 +2,21 @@
     <h1>Vote on it</h1>
     <hr>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 quote">
             <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 quote">
             <div *ngFor='let quote of quotes;let i = index'>
                 <h2> {{quote.quote}}</h2>
-                <button (click)='toggleDetails(i)'>DETAILS</button>
-                <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (isComplete)='deleteQuote($event,i)'>
-                </app-quote-details><br><br>
-                <h4 *ngIf='quote === highestUpVote()' appHighlight>{{quote.quote}}</h4>
-                <button (click)='addUpVote(i)'>UpVote</button>
-                <button (click)='addDownVote(i)'>DownVote</button>
+                <button (click)='toggleDetails(i)' class="btn btn-info">DETAILS</button>
+                <div>
+                    <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (isComplete)='deleteQuote($event,i)'>
+                    </app-quote-details><br>
+                    <h4 *ngIf='quote === highestUpVote()' appHighlight>{{quote.quote}}</h4>
+                    <button (click)='addUpVote(i)' class="btn btn-success">UpVote</button>
+
+                    <button (click)='addDownVote(i)' class="btn btn-danger">DownVote</button>
+                </div>
             </div>
         </div>
     </div>
