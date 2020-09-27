@@ -8,9 +8,9 @@ import { Quote } from 'src/app/quote'
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote('The greatest glory in living lies not in never falling, but in rising every time we fall.', 'Nelson Mandela', 'Joan', new Date(2020, 3, 14)),
-    new Quote("Life is what happens when you're busy making other plans.", 'John Lennon', 'Joan', new Date(2020, 3, 14)),
-    new Quote('Success is not final; failure is not fatal: It is the courage to continue that counts.', 'Winston S. Churchill', 'Joan', new Date(2020, 3, 14))
+    new Quote('The greatest glory in living lies not in never falling, but in rising every time we fall.', 'Nelson Mandela', 'Joan', new Date(2020, 8, 26)),
+    new Quote("Life is what happens when you're busy making other plans.", 'John Lennon', 'Joan', new Date(2020, 8, 26)),
+    new Quote('Success is not final; failure is not fatal: It is the courage to continue that counts.', 'Winston S. Churchill', 'Joan', new Date(2020, 8, 26))
   ]
   toggleDetails(index) {
     this.quotes[index].showDetails = !this.quotes[index].showDetails;

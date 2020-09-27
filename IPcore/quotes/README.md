@@ -2,7 +2,7 @@
 #### By JOAN NANSAMBA
 
 ## Description
-This is an application that enables a user to create quotes and upvote or downvote on them. It also highlights the quote with the most upvotes.
+This is an application that enables a user to create quotes and upvote or downvote on them. It also highlights the quote with the most upvotes.Users can also vote on already existing quotes.
 
 ## Setup/Installation Requirements
 * Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
