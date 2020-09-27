@@ -15,11 +15,6 @@
             <textarea class="form-control" id="quote" rows="4" [(ngModel)]="newQuote.quote" name="quote"
                 #quote='ngModel' required></textarea>
         </div>
-        <div>
-            <label for="date">Created on</label>
-            <input type='date' id="created" [(ngModel)]="newQuote.completeDate" name="completeDate"
-                #completeDate="ngModel" required>
-        </div>
         <button type="submit">ADD QUOTE</button>
     </form>
 </div>
