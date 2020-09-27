@@ -37,15 +37,15 @@ export class QuoteComponent implements OnInit {
   addDownVote(index) {
     this.quotes[index].downVote++;
   }
-  // highestUpVote() {
-  //   let highestUpVoteQuote = this.quotes[0];
-  //   for (let i = 1; i < this.quotes.length; i++) {
-  //     if (this.quotes[i].upVote > highestUpVoteQuote.upVote) {
-  //       highestUpVoteQuote = this.quotes[i]
-  //     }
-  //   }
-  //   return highestUpVoteQuote
-  // }
+  highestUpVote() {
+    let highestUpVoteQuote = this.quotes[0];
+    for (let i = 1; i < this.quotes.length; i++) {
+      if (this.quotes[i].upVote > highestUpVoteQuote.upVote) {
+        highestUpVoteQuote = this.quotes[i]
+      }
+    }
+    return highestUpVoteQuote
+  }
   constructor() { }
 
   ngOnInit(): void {
